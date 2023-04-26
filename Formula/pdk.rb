@@ -5,21 +5,21 @@
 class Pdk < Formula
   desc "The Common Fate Provider Development Kit"
   homepage "https://commonfate.io/"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/pdk/v0.2.0/pdk_0.2.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d7d2d088d443f7e61c697e6954675fd7e1fb89dde412bdc09c8202ecf80024a0"
+      url "http://releases.commonfate.io/pdk/v0.3.0/pdk_0.3.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "5a1daf1138fc9eda7941a5b06f4d6d53bd8592470060f9817991a10c58be2d33"
 
       def install
         bin.install "pdk"
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/pdk/v0.2.0/pdk_0.2.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d1b310b5fa6925139cc8e13fc1113c17f6a182a9cfd8d61aaf0567a020df4909"
+      url "http://releases.commonfate.io/pdk/v0.3.0/pdk_0.3.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "cec59292a20e9e4727af9b93f707c9be391fcd8ed9b2b8eea07a8858025bc5c6"
 
       def install
         bin.install "pdk"
@@ -29,16 +29,16 @@ class Pdk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/pdk/v0.2.0/pdk_0.2.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "362e4d70b39f9a4181af6ecc1fdb15f33b9d2c40c3bcdd0b32aa9d257e91c7b2"
+      url "http://releases.commonfate.io/pdk/v0.3.0/pdk_0.3.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "f1d6e6dfc2181789a3442aa7b94ada64ba5553e9d843975961e73d63c81db38b"
 
       def install
         bin.install "pdk"
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/pdk/v0.2.0/pdk_0.2.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f50c5d1c4734a5d1129ff18276ffad39fce262cbe15d6574b068612ba3f406de"
+      url "http://releases.commonfate.io/pdk/v0.3.0/pdk_0.3.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e3a6a7f37d93be83e5651cfce4f0fea410c03da5850be5440efb88bab03613a0"
 
       def install
         bin.install "pdk"
