@@ -5,21 +5,21 @@
 class Cf < Formula
   desc "The Common Fate CLI"
   homepage "https://commonfate.io/"
-  version "0.6.4"
+  version "0.6.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/cf/v0.6.4/cf_0.6.4_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f939fef38a601e12ad3fa9a733784832ebbfa0649f59cf83d0d4363ec994243c"
+      url "http://releases.commonfate.io/cf/v0.6.5/cf_0.6.5_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "24069a68bcac0d0fa2466789407caadc6e92abe5eae22515108c6c2ceeae050a"
 
       def install
         bin.install "cf"
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v0.6.4/cf_0.6.4_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d778d6046b33be1feb6b8af1fbd9ae164ab600a4852935e7aa5ed5ac0f9a8e91"
+      url "http://releases.commonfate.io/cf/v0.6.5/cf_0.6.5_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4d6d14f93ba949c7ea7d0e9c351e5236fba6247e76f3a64dffc24d840f3aa4ef"
 
       def install
         bin.install "cf"
@@ -29,16 +29,16 @@ class Cf < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v0.6.4/cf_0.6.4_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "2d2c2488bd0621edcdb2d2ba8a48c1b23b4bb8f14c2855be73d6a8f2d42d6d09"
+      url "http://releases.commonfate.io/cf/v0.6.5/cf_0.6.5_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "5ac6839e2e39fc6e833705f70120b0de89fd53e0dca64da273a99b022e7f8245"
 
       def install
         bin.install "cf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/cf/v0.6.4/cf_0.6.4_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "852f0bdcd0eb66bd234bd12dfd3b28b0dae076188fa4bb330aead112f576c939"
+      url "http://releases.commonfate.io/cf/v0.6.5/cf_0.6.5_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "debbd5420f7e0128798871fab64d3d989bec498f0180352ec0664c8a8c9671ad"
 
       def install
         bin.install "cf"
