@@ -1,4 +1,4 @@
-cask 'desktop' do
+cask 'commonfate' do
   arch arm: "arm64", intel: "x64"
 
   version "0.11.1"
