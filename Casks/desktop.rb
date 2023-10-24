@@ -10,7 +10,6 @@ cask 'desktop' do
     sha256 '1fc58e75a2b24b199f29a58356087959e9657b8f'
 
   url "https://releases.commonfate.io/desktop/stable/common-fate-#{arch}-#{version}.dmg"
-  sha256 'ad6c2fe45d120c3b8103461aba1343f8d7a7d78c'
 
   name "Common Fate"
   desc "Common Fate Desktop Application"
