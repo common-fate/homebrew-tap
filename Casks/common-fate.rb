@@ -1,4 +1,4 @@
-cask 'commonfate' do
+cask 'common-fate' do
   arch arm: "arm64", intel: "x64"
 
   version "0.10.0"
