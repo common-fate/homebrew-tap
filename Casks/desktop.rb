@@ -1,6 +1,6 @@
 cask 'desktop' do
-  version '0.10.0'
-  sha256 '1fc58e75a2b24b199f29a58356087959e9657b8ffe53038b6be6e4833d0a87a7'
+  version "0.11.0"
+  sha256 'ad6c2fe45d120c3b8103461aba1343f8d7a7d78c'
 
   url "https://releases.commonfate.io/desktop/stable/common-fate-arm64-0.10.0.dmg"
   name "Common Fate"
