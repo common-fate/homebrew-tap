@@ -1,14 +1,14 @@
 cask 'common-fate' do
   arch arm: "arm64", intel: "x64"
 
-  version "0.11.1-canary.6703352622"
+  version "0.11.2"
   
   on_arm do 
-    sha256 'b3b656804a538cc991a871ba6863bd33ab314ee3'
+    sha256 'e2ce07ace10b009ac0dcfe1c24e91c9221063c9f'
   end
 
   on_intel do
-    sha256 '12d55b8e475b5e97c449c4f44dc3ea6414dc5686'
+    sha256 '5e45002af8c0e7bde212659ef0a657e773ee9903'
   end
 
   url "https://releases.commonfate.io/desktop/stable/common-fate-#{arch}-#{version}.dmg"
