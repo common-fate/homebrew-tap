@@ -5,21 +5,21 @@
 class Cf < Formula
   desc "The Common Fate CLI"
   homepage "https://commonfate.io/"
-  version "1.4.1"
+  version "1.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/cf/v1.4.1/cf_1.4.1_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "faa444a8e083f3d7fa93f3ff57ca40224b7fe4a200a7a7ab8b1bd1cd9f5cba34"
+      url "http://releases.commonfate.io/cf/v1.6.0/cf_1.6.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "fc09632867c5924e65a0c77e6faedc3880ad45ddb8b1dc212964fd9fb0eee556"
 
       def install
         bin.install "cf"
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v1.4.1/cf_1.4.1_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "264829381000c9666352901a25f261b7ac33dcd4fb70a1c62d414a1de4a7d407"
+      url "http://releases.commonfate.io/cf/v1.6.0/cf_1.6.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "54a5f6067ff47ccba229aa04c03dfc9e294d0b1cca7450f3e0cfc48093f3a2ff"
 
       def install
         bin.install "cf"
@@ -28,17 +28,17 @@ class Cf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/cf/v1.4.1/cf_1.4.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d263744739a179a8a0f02252d8b0e683578a92173c1dd87c6080c5236d4d052c"
+    if Hardware::CPU.intel?
+      url "http://releases.commonfate.io/cf/v1.6.0/cf_1.6.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "6851052322c17d9e74f61e9c7a050bb1763d35525918651288442cf1acf2914f"
 
       def install
         bin.install "cf"
       end
     end
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v1.4.1/cf_1.4.1_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "5aa93a9ab88597773deafd7b02a4470bab199fae5c5afb4e4e61a8b031b8e471"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "http://releases.commonfate.io/cf/v1.6.0/cf_1.6.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "9a36c6796226892252b2f95ae850a00af6397c715975e1d10773de7f33a96abc"
 
       def install
         bin.install "cf"
