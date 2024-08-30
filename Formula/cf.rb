@@ -5,21 +5,21 @@
 class Cf < Formula
   desc "The Common Fate CLI"
   homepage "https://commonfate.io/"
-  version "1.15.1"
+  version "1.16.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/cf/v1.15.1/cf_1.15.1_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c7a90c73cc0b9d29cdee5623dbc40fc2d834509bcfde8f351151c56d96484d8e"
+      url "http://releases.commonfate.io/cf/v1.16.0/cf_1.16.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "58c797c8d4c8217f6ca22245696d947ba92e75546af7b533333649736a2d1244"
 
       def install
         bin.install "cf"
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v1.15.1/cf_1.15.1_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "63870d60b9b68d9f33f142b1100f0278bfe54389e63ba525c9bccc6a55c97370"
+      url "http://releases.commonfate.io/cf/v1.16.0/cf_1.16.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "43d83b29a92d789b55082f35342b1d3e42aa4a44c92a09ac2246bf6f77a6a0e7"
 
       def install
         bin.install "cf"
@@ -29,16 +29,16 @@ class Cf < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v1.15.1/cf_1.15.1_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "ab0777f3f676f7e51909da594cc1ec3eec2a7f38f48e7abdbd7a932943034f91"
+      url "http://releases.commonfate.io/cf/v1.16.0/cf_1.16.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "dca100b668ce1cfb70239d4fb5d556002e6d5a48543094bd041c44e7361b66e0"
 
       def install
         bin.install "cf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/cf/v1.15.1/cf_1.15.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "99f0acaebf6b8a670d28282793e67bc9c4ee34b9ae01570d810a019abe8224e3"
+      url "http://releases.commonfate.io/cf/v1.16.0/cf_1.16.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "753b9fc7340dbc5701c080537203f80612ed9b2446a8c065158a259bfdc72f29"
 
       def install
         bin.install "cf"
