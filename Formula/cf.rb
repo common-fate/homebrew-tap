@@ -5,21 +5,21 @@
 class Cf < Formula
   desc "The Common Fate CLI"
   homepage "https://commonfate.io/"
-  version "1.16.2"
+  version "1.17.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v1.16.2/cf_1.16.2_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "8360771d6a74f8e788c3c801e25b617d1336ce77e020ce4e1374f83b4578d336"
+    on_intel do
+      url "http://releases.commonfate.io/cf/v1.17.0/cf_1.17.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8feadc316970cc0c271b0804e1bf4ad679ca4df2273c8127783631315b20e65e"
 
       def install
         bin.install "cf"
       end
     end
-    if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/cf/v1.16.2/cf_1.16.2_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "40f60922548c5668d4175a64c4b074325306be0edf8fcb5e68af365c88a87b86"
+    on_arm do
+      url "http://releases.commonfate.io/cf/v1.17.0/cf_1.17.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f937a24450d68baa9beffa80fef6529efd7b9c86c6a34c780fd89c85f8c0e6cc"
 
       def install
         bin.install "cf"
@@ -28,20 +28,24 @@ class Cf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/cf/v1.16.2/cf_1.16.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f08f0c727e054f2af13a9b144998359fceb2669a3a72ca99e70dde7e55d44753"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "http://releases.commonfate.io/cf/v1.17.0/cf_1.17.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+        sha256 "762cf6ad6b5c965618374940c4a4c27f49916fd088c7ada1410ee1edb2494dc9"
 
-      def install
-        bin.install "cf"
+        def install
+          bin.install "cf"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/cf/v1.16.2/cf_1.16.2_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "5f21dc4175adf48ef2c606d9748fcb3328c0b5eee1c56a1a77bf8d7f66174e77"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "http://releases.commonfate.io/cf/v1.17.0/cf_1.17.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "39e23e9fd6db5bd86d432ccf0c568402748db305a3ae02963a8226c22afdc161"
 
-      def install
-        bin.install "cf"
+        def install
+          bin.install "cf"
+        end
       end
     end
   end
